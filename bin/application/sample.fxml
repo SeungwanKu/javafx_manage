@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@tableview.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <SplitPane dividerPositions="0.28857715430861725" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="320.0">
+               <children>
+                  <Label layoutX="106.0" layoutY="3.0" prefHeight="23.0" prefWidth="74.0" text="창고현황" textAlignment="CENTER">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <SplitPane layoutX="-1.0" layoutY="30.0" prefHeight="143.0" prefWidth="287.0">
+                     <items>
+                        <Canvas fx:id="canvasA" height="147.0" width="285.0" />
+                     </items>
+                  </SplitPane>
+                  <SplitPane layoutX="-1.0" layoutY="180.0" prefHeight="143.0" prefWidth="287.0">
+                     <items>
+                        <Canvas fx:id="canvasB" height="144.0" width="285.0" />
+                     </items>
+                  </SplitPane>
+                  <SplitPane layoutX="-1.0" layoutY="340.0" prefHeight="143.0" prefWidth="287.0">
+                     <items>
+                        <Canvas fx:id="canvasC" height="144.0" width="285.0" />
+                     </items>
+                  </SplitPane>
+                  <Label layoutX="7.0" layoutY="18.0" text="A" />
+                  <Label layoutX="7.0" layoutY="172.0" text="B" />
+                  <Label layoutX="7.0" layoutY="325.0" text="C" />
+               </children></AnchorPane>
+            
+            <AnchorPane prefHeight="598.0" prefWidth="287.0">
+               <children>
+                  <TableView fx:id="myTableView" prefHeight="598.0" prefWidth="455.0">
+                    <columns>
+                      <TableColumn fx:id="codeColumn" prefWidth="57.0" text="코드" />
+                      <TableColumn fx:id="nameColumn" prefWidth="143.0" text="품명" />
+                      <TableColumn fx:id="numColumn" prefWidth="96.0" text="수량" />
+                      <TableColumn fx:id="etcColumn" prefWidth="54.0" text="비고" />
+                    </columns>
+                  </TableView>
+              	  <TextField fx:id="codeField" layoutX="488.0" layoutY="30.0" />
+                  <TextField fx:id="etcField" layoutX="488.0" layoutY="95.0" />
+                  <TextField fx:id="NumField" layoutX="488.0" layoutY="72.0" />
+                  <TextField fx:id="NameField" layoutX="488.0" layoutY="53.0" />
+                  
+                  <Button fx:id="delButton" layoutX="468.0" layoutY="193.0" mnemonicParsing="false" text="A제거" />
+                  <Button fx:id="addButton" layoutX="468.0" layoutY="148.0" mnemonicParsing="false" text="A추가" />
+                  <Label layoutX="464.0" layoutY="57.0" prefHeight="15.0" prefWidth="24.0" text="품명" />
+                  
+                  <Label layoutX="464.0" layoutY="76.0" text="수량" />
+                  <Label layoutX="464.0" layoutY="34.0" text="코드" />
+                  <Label layoutX="464.0" layoutY="99.0" text="비고" />
+                  <Button fx:id="addButton1" layoutX="517.0" layoutY="148.0" mnemonicParsing="false" text="B추가" />
+                  <Button fx:id="addButton2" layoutX="564.0" layoutY="148.0" mnemonicParsing="false" text="C추가" />
+                  <Button fx:id="delButton1" layoutX="517.0" layoutY="193.0" mnemonicParsing="false" text="B제거" />
+                  <Button fx:id="delButton2" layoutX="564.0" layoutY="193.0" mnemonicParsing="false" text="C제거" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
